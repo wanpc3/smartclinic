@@ -43,8 +43,53 @@ button {
     padding: 0.9rem;
 }
 
+/* For Slider */
+.slider {
+    width: 100%;
+    height: 510px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slider img:first-child {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slider img:nth-child(2) {
+    z-index: 0;
+}
+
+.navigation-button {
+    text-align: center;
+    position: relative;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
 /* For Responsive Screen: meaning that it also works for mobile devices screen */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
     .nav-bar {
         display: none;
         position: absolute;
